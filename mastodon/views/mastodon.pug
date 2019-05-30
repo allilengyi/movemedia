@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  p Done!
+  table
+    thead
+      tr: th Entered Post
+    tbody
+      tr
+        td title
+        td content
+      tr
+        td #{title}
+        td #{content}

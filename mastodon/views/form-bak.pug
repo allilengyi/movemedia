@@ -1,0 +1,8 @@
+  form(method='POST' action='/send-to-mastodon')
+    div.form-group
+      label(for='title') title:
+      input#title.form-control(type='text', placeholder='title' name='title')
+    div.form-group
+      label(for='content') content:
+      input#content.form-control(type='text', placeholder='content' name='content')
+    button.btn.btn-primary(type='submit') Abschnicken

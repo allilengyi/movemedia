@@ -36,6 +36,16 @@ router.post('/name', function (req, res) {
 
 router.get('/mastodon', function(req, res, next) {
   res.sendFile(path.join(__dirname + '/../mastodon.html'));
+
+	// The following does not belong to this function, but only serves testing purposes
+	// This is how account name is obtained
+  M.get('accounts/verify_credentials', {}).then(resp => console.log(resp.data.username));
+  M.get('accounts/verify_credentials', 
+	function (err, data, response) {
+	        console.log(data.username);
+	}
+  );
+	// Todo: How to display it?
 });
 
 router.post('/mastodon', function (req, res) {
